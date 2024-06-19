@@ -22,7 +22,16 @@ Please note that this repository is designed to be run on a Linux operating syst
    ```
    cd MuJoCo_Gymnasium_Deep_Reinforcement_Learning
    ```
-2. You need to install some dependencies. Run the following commands in your terminal:
+
+2. Install MuJoCo
+    1. Download the MuJoCo version 2.1 binaries for [Linux](https://mujoco.org/download/mujoco210-linux-x86_64.tar.gz)
+    2. Extract the downloaded
+    ``` mujoco210``` directory into ```~/.mujoco/mujoco210```
+    3. Add the following lines at the End of the ```~/.bashrc``` file:
+        1. ```export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/landolt/.mujoco/mujoco210/bin```
+        2. ```export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia```
+
+3. You need to install some dependencies. Run the following commands in your terminal:
     ```bash
     sudo apt-get install -y \
         libgl1-mesa-dev \
@@ -34,7 +43,7 @@ Please note that this repository is designed to be run on a Linux operating syst
     sudo apt-get install -y libx11-dev
     sudo apt-get install -y build-essential
 
-3. Create a virtual environment and activate it.
+4. Create a virtual environment and activate it.
 
     ```
     python3 -m venv env
@@ -43,14 +52,14 @@ Please note that this repository is designed to be run on a Linux operating syst
     source env/bin/activate
     ```
 
-4. Install the requirements from the `requirements.txt` file.
+5. Install the requirements from the `requirements.txt` file.
     ```
     pip install -r requirements.txt
     ```
 
-5. Start Jupyter Notebook:
+6. Start Jupyter Notebook:
    ```
    jupyter notebook
     ```
 
-6. Open `HumanoidStandup.ipynb` and run the cells.
+7. Open `HumanoidStandup.ipynb` and run the cells.
